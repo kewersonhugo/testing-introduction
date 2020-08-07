@@ -7,7 +7,27 @@ import fizzBuzz from "./fizz-buzz";
 // if the number is divisible by both 3 and 5, print Fizz Buzz
 // else, print the number
 
-test("This test always fail", () => {
-  const result = fizzBuzz();
-  expect(result).toBeTruthy();
+test("should return Fizz when passing a number divisible by 3 as input", () => {
+  expect(fizzBuzz(3)).toEqual("Fizz");
+  expect(fizzBuzz(6)).toEqual("Fizz");
+  expect(fizzBuzz(9)).toEqual("Fizz");
+  expect(fizzBuzz(15)).toContain("Fizz");
+});
+
+test("should return Buzz when passing a number divisible by 5 as input", () => {
+  expect(fizzBuzz(5)).toEqual("Buzz");
+  expect(fizzBuzz(10)).toEqual("Buzz");
+  expect(fizzBuzz(15)).toContain("Buzz");
+});
+
+test("should return Fizz Buzz when passing a number divisible by 3 and 5 as input", () => {
+  expect(fizzBuzz(15)).toEqual("Fizz Buzz");
+  expect(fizzBuzz(30)).toEqual("Fizz Buzz");
+  expect(fizzBuzz(300)).toContain("Fizz Buzz");
+});
+
+test("should return the given input when passing any number not divisible by 3 or 5 as input", () => {
+  expect(fizzBuzz(1)).toEqual(1);
+  expect(fizzBuzz(2)).toEqual(2);
+  expect(fizzBuzz(4)).toEqual(4);
 });

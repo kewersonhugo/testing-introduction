@@ -105,7 +105,7 @@
   - What are integration tests?
     - Can be slow
     - Can talk to external systems
-    - Normally need mocks
+    - Normally need mocks (um fake)
     - Testing together with other components
     - Eg. Testing if a HTTP was made, communication between two components using Redux
   
@@ -139,7 +139,6 @@
       - The results come in the long run
     - We can't test everything. Code was not writen to be tested.
     - It can reduce our productivity until we get familiar.
-    - We can't test everything.
 
 
 
@@ -172,3 +171,6 @@
       - Act/Interact
       - Assert/Verify
     - Show coverage example
+
+
+- Give pratical example
