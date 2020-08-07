@@ -43,7 +43,8 @@
       "!<rootDir>/path/to/dir/"
     ],
     "coverageReporters": [
-      "text"
+      "text",
+      "html"
     ]
   }
 }
